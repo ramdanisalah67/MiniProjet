@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+/* Add this line to styles.css or styles.scss */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+main {
+    text-align: center;
+    position: relative;
+}
+
+body {
+    height: 1000px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

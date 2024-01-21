@@ -1,0 +1,29 @@
+.mat-elevation-z8 {
+    top: 0;
+    left: 0;
+}
+
+
+
+.btn {
+    position: relative;
+    top: 120px;
+}
+
+.add {
+    font-size: 25px ;
+    cursor: pointer;
+    color: blue;
+
+}
+.del {
+    font-size: 25px ;
+    cursor: pointer;
+    color: red;
+
+}
+
+.bt {
+    position: relative;
+    left: 280px;
+}

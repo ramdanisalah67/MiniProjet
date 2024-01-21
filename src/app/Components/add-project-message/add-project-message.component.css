@@ -1,0 +1,26 @@
+.crois{
+    font-size: 50px;
+    color: blue;
+    position: relative;
+    left: 43%;
+}
+
+h1 {
+    margin: 0 !important;
+}
+.text-success {
+    text-align: center;
+}
+a {
+    float: right;
+}
+
+p{
+    color: blue;
+}
+.add {
+    font-size: 30px;
+    font-weight: bolder ;
+    cursor: pointer;
+
+}

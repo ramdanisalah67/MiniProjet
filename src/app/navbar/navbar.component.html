@@ -1,0 +1,29 @@
+<button class="next" (click)="navigatePages1()"><p>>>></p> <p></p></button>
+<button class="previous" (click)="navigatePages2()"><p><<<</p> <p></p></button>
+
+    <div class="navigation">
+        <ul>
+            <li class="list active"  >
+                <a (click)="go(0)"  >
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            
+            <li class="list">
+                <a routerLink="about">
+                    <span class="icon"><ion-icon name="information-outline"></ion-icon></span>
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="list" routerLink="photos">
+                <a >
+                    <span class="icon"><ion-icon name="copy-outline"></ion-icon></span>
+                    <span class="text">Products</span>
+                </a>
+            </li>
+            
+            <div class="indicator" id="indicator"> <span id="bf"></span> <span id="af"></span></div>
+        </ul>
+    </div>
+    

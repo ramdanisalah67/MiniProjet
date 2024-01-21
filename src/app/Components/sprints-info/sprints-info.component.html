@@ -1,0 +1,52 @@
+<a class="btn btn-primary" routerLink="/addSprint" >Add Sprint</a>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <!-- Position Column -->
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef> Id</th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }} </td>
+    </ng-container>
+
+    <!-- Sprint Name Column -->
+    <ng-container matColumnDef="sprintName">
+      <th mat-header-cell *matHeaderCellDef> Sprint Name </th>
+      <td mat-cell *matCellDef="let element"> {{ element.SprintName }} </td>
+    </ng-container>
+
+    <!-- Sprint Goal Column -->
+    <ng-container matColumnDef="sprintGoal">
+      <th mat-header-cell *matHeaderCellDef> Sprint Goal </th>
+      <td mat-cell *matCellDef="let element"> {{ element.SprintGoal }} </td>
+    </ng-container>
+
+    <!-- Date Debut Column -->
+    <ng-container matColumnDef="dateDebut">
+      <th mat-header-cell *matHeaderCellDef> Date Debut </th>
+      <td mat-cell *matCellDef="let element"> {{ element.DateDebut | date }} </td>
+    </ng-container>
+
+    <!-- Date Fin Column -->
+    <ng-container matColumnDef="dateFin">
+      <th mat-header-cell *matHeaderCellDef> Date Fin </th>
+      <td mat-cell *matCellDef="let element"> {{ element.DateFin | date }} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="projectName">
+      <th mat-header-cell *matHeaderCellDef> Project Name </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Projet?.Libelle }} </td>
+    </ng-container> 
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let element" class="tt"> 
+          <ion-icon name="create-outline" (click)="updateSprint(element.Id)"></ion-icon>
+          <ion-icon name="close-circle-outline"  (click)="deleteSprint(element.Id)"></ion-icon> 
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of sprints">
+  </mat-paginator>
+</div>

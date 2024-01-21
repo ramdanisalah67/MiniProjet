@@ -1,0 +1,14 @@
+.example-form {
+    margin-left: 407px !important;
+    margin-top: 100px !important;
+}
+
+.title {
+    border-bottom: 7px solid rgb(102, 34, 111);
+    width: 14%;
+    position: relative;
+    top: 100px;
+    font-weight: bolder;
+    font-size: 19px;
+    padding: 4px;
+}

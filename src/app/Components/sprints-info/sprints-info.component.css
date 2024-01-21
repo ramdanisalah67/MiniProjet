@@ -1,0 +1,28 @@
+
+
+.mat-elevation-z8{
+    width: 75%;
+    position: relative;
+    left: 170px;
+    top: 100px;
+    border-radius: 25%;
+}
+.btn {
+    position: relative;
+    top: 120px;
+}
+
+ion-icon {
+    font-size: 25px ;
+    cursor: pointer;
+
+}
+.sp {
+    color: blue;
+}
+ .tt ion-icon:nth-child(1) {
+    color: green;
+}
+.tt ion-icon:nth-child(2) {
+    color: red;
+}
