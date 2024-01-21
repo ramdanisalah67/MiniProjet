@@ -12,7 +12,7 @@
     height: 100vh ;
     width: 100%;
     position: relative;
-    background-image: url('../assets/imgs/pexels-quang-nguyen-vinh-14036001.jpg');
+    background-image: url('../assets/imgs/pexels-photo-3435249.webp');
     background-size: cover;
     background-position: center;
     }
@@ -208,7 +208,7 @@ img {
 
 .sidebar ul li.active a .icon {
 
-    color: #fff;
+    color: black;
 }
 .sidebar ul li.active a .text {
 
@@ -242,7 +242,7 @@ background: #fff;
 
 
 .data {
-    color: white;
+    color:black;
     width: calc(100%  - 150px);
     
     position: absolute;

@@ -9,9 +9,9 @@
 }
 .btn {
     position: relative;
-    top: 120px;
+    top: 485px;
+    left: 590px;
 }
-
 ion-icon {
     font-size: 25px ;
     cursor: pointer;
