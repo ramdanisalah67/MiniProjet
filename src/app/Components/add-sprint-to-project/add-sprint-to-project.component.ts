@@ -36,6 +36,7 @@ export class AddSprintToProjectComponent implements OnInit {
       this.id=data.prj.Id
       this.infoProject =data.prj 
       this.newSprints = this.infoProject.Sprints || [];
+      console.log(this.infoProject)
     }
   }
   
@@ -47,7 +48,6 @@ export class AddSprintToProjectComponent implements OnInit {
   ngOnInit() {
     this.projectService.getById(this.id).subscribe(data=>{this.project=data})
     this.myService.getAllSprints().subscribe(data => {
-      console.log(data);
       this.sprints = data;
 
       // Initialize dataSource here

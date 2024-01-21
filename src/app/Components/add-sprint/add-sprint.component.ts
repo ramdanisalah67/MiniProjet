@@ -53,8 +53,7 @@ export class AddSprintComponent implements OnInit {
 
     if(this.myformbuilder.valid) {
       this.sprint.Id= Math.floor(Math.random() * 1000000);
-      console.log(this.sprint)
-      this.myService.addSprint(this.sprint).subscribe(data=>{console.log(data);})
+      this.myService.addSprint(this.sprint).subscribe(data=>{})
       if( this.sprint) {
         this.openDialog()
       }
@@ -65,6 +64,7 @@ export class AddSprintComponent implements OnInit {
         const dialogConfig = new MatDialogConfig();
         dialogConfig.width = '500px';
         dialogConfig.height = '170px';
+        dialogConfig.data ={sprint:this.sprint,id:this.sprint.ProjetId}
         this.dialog.open(AddSprintMessageComponent,dialogConfig
         )
       }
@@ -74,9 +74,9 @@ export class AddSprintComponent implements OnInit {
         this.sprint= this.myformbuilder.value
         const selectedProject: Project = event.value as Project;
         this.sprint.ProjetId=selectedProject.Id
-        this.sprint.Projet=selectedProject
-        this.sprint.Projet.Sprints=[]
-        console.log(this.sprint)
+        if (this.sprint.Projet) {
+          this.sprint.Projet.Sprints = [];
+        }
       }
 
      
